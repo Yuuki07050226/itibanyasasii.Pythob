@@ -30,10 +30,10 @@ for student_name in score_dict:
     if total >= excellent:
         evaluation = 'Excellent!'
     elif total >= good:
-        excellent = 'Good'
+        evaluation = 'Good'
     else:
-        excellent = 'Bad'
-    evaluation_dict[student_name] = excellent
+        evaluation = 'Bad'
+    evaluation_dict[student_name] = evaluation
 
 file_name = 'evaluation.txt'
 output_file = open('file_name', 'w')
