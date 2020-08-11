@@ -1,10 +1,10 @@
 open_file = open('point.txt')
 raw_data = open_file.read()
 open_file.close()
-point_date = raw_data.splitlines()
+point_data = raw_data.splitlines()
 
 point_dict = {}
-for line in point_date:
+for line in point_data:
     student_name, points_str = line.split(':')
     point_dict[student_name] = points_str
 
@@ -20,10 +20,10 @@ for student_name in point_dict:
 
 evaluation_dict = {}
 for student_name in score_dict:
-    score_date = score_dict[student_name]
-    total = score_date[0]
-    average = score_date[1]
-    subject_number = score_date[2]
+    score_data = score_dict[student_name]
+    total = score_data[0]
+    average = score_data[1]
+    subject_number = score_data[2]
 
     excellent = subject_number * 100 * 0.8
     good = subject_number * 100 * 0.65
@@ -38,8 +38,8 @@ for student_name in score_dict:
 file_name = 'evaluation.txt'
 output_file = open('file_name', 'w')
 for student_name in score_dict:
-    score_date = score_dict[student_name]
-    total = score_date[0]
+    score_data = score_dict[student_name]
+    total = score_data[0]
 
     evaluation = evaluation_dict[student_name]
 
